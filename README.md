@@ -43,13 +43,13 @@ The repository is structured as follows:
 ## SSL
 
 The contents of the SSL related directories in the build environment are copied directly to specific directories in 
-the `/etc/tls` tree. After the trust anchors are copied, `update-ca-trust` is run. This arrangement is intended to 
+the `/etc/pki` tree. After the trust anchors are copied, `update-ca-trust` is run. This arrangement is intended to 
 make the process of configuring the container for SSL as easy, transparent and painless as possible. If there are 
 any questions, a quick inspection of the Dockerfile should resolve any uncertainty as to what is intended. Specifically: 
 
-* `buildenv/anchors` maps to `/etc/tls/ca-trust/source/anchors`
-* `buildenv/certs` maps to `/etc/tls/pki/certs`
-* `buildenv/private` maps to `/etc/tls/pki/private`
+* `buildenv/anchors` maps to `/etc/pki/ca-trust/source/anchors`
+* `buildenv/certs` maps to `/etc/pki/tls/certs`
+* `buildenv/private` maps to `/etc/pki/tls/private`
 
 How you might use this: 
 
