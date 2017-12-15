@@ -1,0 +1,13 @@
+# This gitignore is designed to keep the repository free of 
+# specific keys, certificates, and custom config added by
+# the user for a specific host.
+
+# Ignore any certificates the user loads
+*.key
+*.cer
+*.crt
+*.pem
+
+# ignore custom config
+*.conf
+*.json
